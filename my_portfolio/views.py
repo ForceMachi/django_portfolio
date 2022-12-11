@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from .models import Project
+
 
 # Create your views here.
 def home(request):
-    return render(request, 'my_portfolio/home.html', {'title': 'Password generator'})
+    project = Project.objects.all()
+    return render(request, 'my_portfolio/home.html', {'project': project})
