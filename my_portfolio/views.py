@@ -5,4 +5,5 @@ from .models import Project
 # Create your views here.
 def home(request):
     project = Project.objects.all()
-    return render(request, 'my_portfolio/home.html', {'project': project})
+    # serch_id = request.GET.get('item')
+    return render(request, 'my_portfolio/home.html', {'tittle': 'Ruslan\'s blog', 'project': project})

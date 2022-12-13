@@ -1,0 +1,42 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+.home_header_block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 7rem;
+}
+
+.home_header_block > img{
+    width: 350px;
+    margin-bottom: 30px;
+}
+
+.home_header_block > h1{
+    font-size: 4rem;
+}
+
+.nav-logo{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.navbar{
+    margin-bottom: 7rem;
+}
+
+.home-photo{
+
+}
