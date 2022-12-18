@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <a href="{% url 'home' %}" class="back"><img src="{% static 'img/west_FILL0_wght400_GRAD0_opsz48.svg' %}"></a>
+
+    <div class="portfolio_flexg">
+        <div class="portfolio_item">
+            <h1 style="font-weight:bold;">{{ portfolio.tittle }}</h1>
+            <a href="{{ portfolio.url }}">Project link</a>
+            <p>{{ portfolio.description }}</p>
+            <img style="width: 100%;" src="{{ portfolio.image.url }}">
+        </div>
+    </div>
+
+{% endblock %}

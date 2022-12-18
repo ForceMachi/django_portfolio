@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
-    <h1>{{ blog.tittle }}</h1>
-    <span>{{ blog.date|date:'F d Y' }}</span>
-    <p>{{ blog.description }}</p>
+    <a href="{% url 'blog:all_blogs' %}" class="back"><img src="{% static 'img/west_FILL0_wght400_GRAD0_opsz48.svg' %}"></a>
+
+    <h1 style="font-weight: bold;">{{ blog.tittle }}</h1>
+    <span style="font-size: 12px;">{{ blog.date|date:'F d Y' }}</span>
+    <p style="margin-top: 10px; margin-bottom: 4rem;">{{ blog.description }}</p>
 
 {% endblock %}

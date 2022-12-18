@@ -25,6 +25,7 @@ html, body{
 
 .home_header_block > h1{
     font-size: 4rem;
+    font-weight: bold;
 }
 
 .nav-logo{
@@ -33,10 +34,116 @@ html, body{
     margin-right: 10px;
 }
 
-.navbar{
+.navbar {
     margin-bottom: 7rem;
 }
 
-.home-photo{
+.card_img_box{
+    position: relative;
+    overflow: hidden;
+    max-width: 550px;
+    width: 100%;
+    height: 250px;
+    cursor: pointer;
+}
 
+.card_img_box_this{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 550px;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: 0.7s;
+}
+
+.portfolio_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    padding-bottom: 5rem;
+}
+
+.card_info{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    padding-top: 300px;
+    padding-left: 50px;
+    padding-right: 50px;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.card_img_box:hover .card_info{
+    transition: 0.7s;
+    padding-top: 100px;
+    background-color: rgba(0, 0, 0, 0.67);
+}
+
+.blog_head_content{
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.blog_head_content > h1{
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.blog_head_content > p{
+    letter-spacing: 1px;
+}
+
+.blog_head_content > h1 > span{
+    background-color: #ffb300;
+    border-radius: 10px;
+    padding: 0 15px 5px 15px;
+    color: white;
+}
+
+.blogs_flex{
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.blogs_flex-item{
+    max-width: 600px;
+}
+
+.blogs_flex-item > a{
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blogs_flex-item > span{
+    font-size: 12px;
+}
+
+.blogs_flex-item > p{
+    margin-top: 10px;
+    margin-bottom: 5rem;
+}
+
+.back{
+    position: absolute;
+    margin-top: -90px;
+}
+
+.portfolio_flex{
+    padding-bottom: 5rem;
 }

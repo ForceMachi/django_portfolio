@@ -2,12 +2,19 @@
 
 {% block content %}
 
-    <h1>Ruslan's blog</h1>
-    <p>{{ blog.count }} blog{{ blog.count|pluralize }}</p>
-    {% for item in blog %}
-        <a href="{% url 'blog:detail' item.id %}"><h2>{{ item.tittle }}</h2></a>
-        <span>{{ item.date|date:'F d Y' }}</span>
-        <p>{{ item.description|truncatechars:100 }}</p>
-    {% endfor %}
+    <div class="blog_head_content">
+        <h1>Ruslan's <span>blog</span></h1>
+        <p>{{ blog.count }} blog{{ blog.count|pluralize }} published on the site</p>
+    </div>
+
+    <div class="blogs_flex">
+        {% for item in blog %}
+            <div class="blogs_flex-item">
+                <a href="{% url 'blog:detail' item.id %}"><h2>{{ item.tittle }}</h2></a><br>
+                <span>{{ item.date|date:'F d Y' }}</span>
+                <p>{{ item.description|truncatechars:300 }}</p>
+            </div>
+        {% endfor %}
+    </div>
 
 {% endblock %}

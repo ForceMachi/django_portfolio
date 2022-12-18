@@ -2,23 +2,25 @@
 {% load static %}
 
 {% block content %}
+
     <div class="home_header_block">
         <img src="{% static 'img/me.jpg' %}" class="home-photo">
         <h1>Ruslan's portfolio, this is my first site and I really want to share my work with you, cockerels.</h1>
     </div>
     <h1>Portfolios</h1>
     <hr>
-    {% for item in project %}
-        {% if item.url %}
-            <a href="{{ item.url }}">
-        {% endif %}
-            <h3>{{ item.tittle }}</h3>
-            <p>{{ item.description }}</p>
-            <img src="{{ item.image.url }}" height="500" width="200">
-        {% if item.url %}
+
+    <div class="portfolio_container">
+        {% for item in project %}
+            <a href="{% url 'portfolio' item.id %}" class="card_img_box">
+                <img src="{{ item.image.url }}" class="card_img_box_this">
+                <div class="card_info">
+                    <h5 class="card-title">{{ item.tittle }}</h5>
+{#                    <p class="card-text">{{ item.description }}</p>#}
+                </div>
             </a>
-        {% endif %}
-    {% endfor %}
+        {% endfor %}
+    </div>
 
 
 {% endblock %}
